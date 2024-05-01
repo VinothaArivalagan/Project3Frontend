@@ -7,7 +7,7 @@ const SignupPage = () => {
   const [name, setName] = useState('');
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  
+  const [errorMessage, setErrorMessage] = useState(undefined);
 
   const handleSubmit = async event => {
     event.preventDefault()
@@ -25,15 +25,21 @@ const SignupPage = () => {
         const newUser = await response.json()
         console.log(newUser)
         navigate('/login')
+      } else if (response.status === 400) {
+        const error = await response.json()
+        console.log(error)
+        throw new Error(error.message)
       }
     } catch (error) {
       console.log(error)
+      setErrorMessage(error.message)
     }
   }
 
   return (
     <>
       <h1>Signup</h1>
+      {errorMessage && <p>{errorMessage}</p>}
       <form onSubmit={handleSubmit}>
       <label>
           Name
