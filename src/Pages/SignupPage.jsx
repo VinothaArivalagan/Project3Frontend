@@ -55,7 +55,7 @@ const SignupPage = () => {
             value={password}
             onChange={event => setPassword(event.target.value)}
             required
-            type='password'
+            type="password"
           />
         </label>
         <button type='submit'>Sign Up</button>

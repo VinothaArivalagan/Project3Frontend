@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useEffect, useState } from 'react';
 
 export const SessionContext = createContext()
 
@@ -61,8 +61,8 @@ const SessionContextProvider = ({ children }) => {
         body: JSON.stringify(payload),
       })
       if (response.ok) {
-        const newBook = await response.json()
-        console.log(newBook)
+        const newProduct = await response.json()
+        console.log(newProduct)
       }
     } catch (error) {
       console.log(error)
