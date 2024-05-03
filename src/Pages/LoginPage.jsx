@@ -26,7 +26,7 @@ const LoginPage = () => {
         const parsed = await response.json()
         console.log(parsed)
         setToken(parsed.token)
-        navigate('/profile')
+        navigate('/products')
       }
     } catch (error) {
       console.log(error)

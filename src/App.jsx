@@ -4,8 +4,10 @@ import LoginPage from './Pages/LoginPage';
 import HomePage from './Pages/HomePage';
 import Navbar from './components/Navbar';
 import Products from '../src/Pages/ProductPage';
-import NewProduct from './Pages/NewProductPage'
-
+import NewProduct from './Pages/NewProductPage';
+import Volunteer from '../src/Pages/PeoplePage';
+import Event from '../src/Pages/EventPage';
+import AddPeople from './Pages/NewPeople';
 import './App.css';
 
 
@@ -18,6 +20,9 @@ function App() {
     <Route path = '/login' element={<LoginPage />} />
     <Route path = '/products' element={<Products />} />
     <Route path = '/products/new' element={<NewProduct />} />
+    <Route path = '/volunteer' element={<Volunteer />} />
+    <Route path = '/event' element={<Event />} />
+    <Route path = '/volunteer/new' element={<AddPeople />} />
     <Route path = '*' element ={<h1>404 Page</h1> } />
   </Routes>
   </>

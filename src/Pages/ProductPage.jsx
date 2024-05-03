@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const AllProductPage = () => {
@@ -32,8 +33,12 @@ const AllProductPage = () => {
           <p>{currentProduct.Condition}</p>
           <p>{currentProduct.Location}</p>
           </li>
+           ))}
+          <li>
+          <Link to='/products/new'>NewProduct</Link>
+          </li>
 
-        ))}
+       
       </ul>
     </>
   )
