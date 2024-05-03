@@ -21,7 +21,10 @@ const Navbar = () => {
               <Link to='/volunteer'>Volunteer</Link>
             </li>
             <li>
-              <Link to='/event'>Event</Link>
+              <Link to='/event'>Events</Link>
+            </li>
+            <li>
+              <Link to='/logout'>LogOut</Link>
             </li>
           </>
         <li>

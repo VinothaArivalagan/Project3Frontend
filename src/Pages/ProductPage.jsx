@@ -27,11 +27,11 @@ const AllProductPage = () => {
       <h1>All Categories</h1>
       <ul>
         {products.map(currentProduct => (
-          <li key={currentProduct._id}>{currentProduct.Name}
-          <image src = {currentProduct.Image}  />
-          <h3>{currentProduct.Year}</h3>
-          <p>{currentProduct.Condition}</p>
-          <p>{currentProduct.Location}</p>
+          <li key={currentProduct._id}>{currentProduct.name}
+          <image src = {currentProduct.image}  />
+          <h3>{currentProduct.year}</h3>
+          <p>{currentProduct.condition}</p>
+          <p>{currentProduct.location}</p>
           </li>
            ))}
           <li>

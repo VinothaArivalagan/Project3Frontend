@@ -25,11 +25,11 @@ const EventPage = () => {
       <h1>Here, the Upcoming Events</h1>
       <ul>
         {events.map(currentEvents => (
-          <li key={currentEvents._id}>{currentEvents.Name}
-          <h3>{currentEvents.Venue}</h3>
-          <p>{currentEvents.Date}</p>
-          <p>{currentEvents.Time}</p>
-          <p>{currentEvents.OrganizedBy}</p>
+          <li key={currentEvents._id}>{currentEvents.name}
+          <h3>{currentEvents.venue}</h3>
+          <p>{currentEvents.date}</p>
+          <p>{currentEvents.time}</p>
+          <p>{currentEvents.organizedBy}</p>
           </li>
         ))}
       </ul>

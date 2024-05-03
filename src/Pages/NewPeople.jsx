@@ -3,7 +3,7 @@ import { SessionContext } from '../Context/SessionContext';
 
 
 const AddPeople = () => {
-  const { withToken } = useContext(SessionContext)
+  const { tokenWith } = useContext(SessionContext)
 
   const [name, setName] = useState('')
   const [age, setAge] = useState('')
@@ -15,11 +15,11 @@ const AddPeople = () => {
     event.preventDefault()
     const payload = {name, age, phone, email, date  }
 
-    withToken('/volunteer', 'POST', payload)
+    tokenWith('/volunteer', 'POST', payload)
   }
 
   useEffect(() => {
-    withToken('/volunteer')
+    tokenWith('/volunteer')
   }, [])
 
   return (
@@ -41,10 +41,6 @@ const AddPeople = () => {
         <label>
           Email id
           <input value={email} onChange={event => setEmail(event.target.value)} required/>
-        </label>
-        <label>
-          Date
-          <input value={date} onChange={event => setDate(event.target.value)} required/>
         </label>
         <button type='submit'>Add People</button>
       </form>
