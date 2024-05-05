@@ -27,11 +27,10 @@ const PeoplePage = () => {
       <h1>Please add you details for Volunteering</h1>
       <ul>
         {volunteers.map(currentVolunteer => (
-          <li key={currentVolunteer._id}>{currentVolunteer.Name}
-          <p>{currentVolunteer.Age}</p>
-          <p>{currentVolunteer.Phone}</p>
-          <p>{currentVolunteer.Email}</p>
-          <p>{currentVolunteer.DateAvailability}</p>
+          <li key={currentVolunteer._id}>{currentVolunteer.name}
+          <p>{currentVolunteer.age}</p>
+          <p>{currentVolunteer.phone}</p>
+          <p>{currentVolunteer.email}</p>
           
           </li>
             ))}

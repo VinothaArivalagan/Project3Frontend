@@ -1,0 +1,45 @@
+/* Style for the product list */
+ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  /* Style for the product image */
+  li img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the product name */
+  li h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  /* Style for the product details */
+  li p {
+    margin-bottom: 5px;
+  }
+  
+  /* Style for the "New Product" link */
+  li:last-child {
+    margin-top: 20px;
+  }
+  
+  li:last-child a {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  li:last-child a:hover {
+    text-decoration: underline;
+  }
+  

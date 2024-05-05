@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../css/Product.css';
 
 
 const AllProductPage = () => {
@@ -24,15 +25,17 @@ const AllProductPage = () => {
 
   return (
     <>
+    <div className="wrapper"></div>
       <h1>All Categories</h1>
       <ul>
         {products.map(currentProduct => (
+          <div className="coursed">
           <li key={currentProduct._id}>{currentProduct.name}
           <image src = {currentProduct.image}  />
           <h3>{currentProduct.year}</h3>
           <p>{currentProduct.condition}</p>
           <p>{currentProduct.location}</p>
-          </li>
+          </li></div>
            ))}
           <li>
           <Link to='/products/new'>NewProduct</Link>

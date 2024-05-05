@@ -3,7 +3,7 @@ import { SessionContext } from '../Context/SessionContext';
 
 
 const AddPeople = () => {
-  const { tokenWith } = useContext(SessionContext)
+  const { withToken } = useContext(SessionContext)
 
   const [name, setName] = useState('')
   const [age, setAge] = useState('')
@@ -19,7 +19,7 @@ const AddPeople = () => {
   }
 
   useEffect(() => {
-    tokenWith('/volunteer')
+    withToken('/volunteer')
   }, [])
 
   return (
