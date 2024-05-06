@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react'
 import { SessionContext } from '../Context/SessionContext';
 
 const AddProduct = () => {
-  const { tokenWith } = useContext(SessionContext)
+  const { formDataWithToken, withToken } = useContext(SessionContext)
 
   const [name, setName] = useState('')
   const [year, setYear] = useState('')
@@ -17,21 +17,17 @@ const AddProduct = () => {
     formData.append('name', name);
     formData.append('year', year);
     formData.append('condition', condition);
-    formData.append('image', image); // Append the image file
+    formData.append('image', image); 
     formData.append('location', location);
 
-    await tokenWith('/products', 'POST', formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data', // Set the content type to multipart/form-data
-      },
-    })
+    await formDataWithToken('/products', 'POST', formData)
     setAdded(true);
 
   }
 
   useEffect(() => {
-    tokenWith('/products')
-  }, [tokenWith])
+    withToken('/products')
+  }, [])
 
   const handleImageChange = event => {
     const file = event.target.files[0];
@@ -56,7 +52,7 @@ const AddProduct = () => {
         </label>
         <label>
           Image
-          <input type = "file" onChange={handleImageChange} accept = "image/*" required/>
+          <input type = "file" onChange={handleImageChange} accept = "image/png, image/jpg" required/>
         </label>
         <label>
           Location
