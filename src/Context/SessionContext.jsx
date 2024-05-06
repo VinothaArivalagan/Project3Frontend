@@ -70,8 +70,28 @@ const SessionContextProvider = ({ children }) => {
     }
   }
 
+  const tokenWith = async (endpoint, method = 'GET', formData) => {
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api${endpoint}`, {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(formData),
+      })
+      if (response.ok) {
+        const newProduct = await response.json()
+        console.log(newProduct)
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+
   return (
-    <SessionContext.Provider value={{ token, setToken, logout, isLoading, withToken }}>
+    <SessionContext.Provider value={{ token, setToken, logout, isLoading, withToken, tokenWith }}>
       {children}
     </SessionContext.Provider>
   )

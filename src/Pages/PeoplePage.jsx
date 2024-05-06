@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
+import '../css/People.css';
 
 
 const PeoplePage = () => {
@@ -24,21 +25,25 @@ const PeoplePage = () => {
 
   return (
     <>
+        <div className="people">
+
       <h1>Please add you details for Volunteering</h1>
       <ul>
         {volunteers.map(currentVolunteer => (
-          <li key={currentVolunteer._id}>{currentVolunteer.name}
-          <p>{currentVolunteer.age}</p>
-          <p>{currentVolunteer.phone}</p>
-          <p>{currentVolunteer.email}</p>
+                  <div className="volunteer">
+
+          <li key={currentVolunteer._id}><strong>Name: </strong>{currentVolunteer.name}
+          <p><strong>Age: </strong>{currentVolunteer.age}</p>
+          <p><strong>Phone: </strong>{currentVolunteer.phone}</p>
+          <p><strong>Email: </strong>{currentVolunteer.email}</p>
           
-          </li>
+          </li></div>
             ))}
-          <li>
-          <Link to='/volunteer/new'>AddPeople</Link>
-        </li>
+          <div className='adding-container'>
+          <Link className='adding' to='/volunteer/new'>AddPeople</Link>
+        </div>
       
-      </ul>
+      </ul></div>
     </>
   )
 }

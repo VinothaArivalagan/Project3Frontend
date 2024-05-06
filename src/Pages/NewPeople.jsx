@@ -9,13 +9,14 @@ const AddPeople = () => {
   const [age, setAge] = useState('')
   const [phone, setPhone] = useState('')
   const [email, setEmail] = useState();
-  const [date, setDate] = useState();
+  const [added, setAdded] = useState(false);
 
   const handleSubmit = async event => {
     event.preventDefault()
-    const payload = {name, age, phone, email, date  }
+    const payload = {name, age, phone, email  }
 
-    tokenWith('/volunteer', 'POST', payload)
+    await withToken('/volunteer', 'POST', payload)
+    setAdded(true);
   }
 
   useEffect(() => {
@@ -44,6 +45,10 @@ const AddPeople = () => {
         </label>
         <button type='submit'>Add People</button>
       </form>
+      {added && (
+      <div style={{ textAlign: 'center' }}>
+        <p> People added to the Volunteer list.</p></div>
+      )}
     </>
   )
 }

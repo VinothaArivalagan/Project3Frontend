@@ -2,24 +2,41 @@ import { useContext, useEffect, useState } from 'react'
 import { SessionContext } from '../Context/SessionContext';
 
 const AddProduct = () => {
-  const { withToken } = useContext(SessionContext)
+  const { tokenWith } = useContext(SessionContext)
 
   const [name, setName] = useState('')
   const [year, setYear] = useState('')
   const [condition, setCondition] = useState('')
-  const [image, setImage] = useState();
-  const [location, setLocation] = useState();
+  const [image, setImage] = useState(null);
+  const [location, setLocation] = useState('');
+  const [added, setAdded] = useState(false);
 
   const handleSubmit = async event => {
     event.preventDefault()
-    const payload = {name, year, condition, image, location  }
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('year', year);
+    formData.append('condition', condition);
+    formData.append('image', image); // Append the image file
+    formData.append('location', location);
 
-    withToken('/products', 'POST', payload)
+    await tokenWith('/products', 'POST', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data', // Set the content type to multipart/form-data
+      },
+    })
+    setAdded(true);
+
   }
 
   useEffect(() => {
-    withToken('/products')
-  }, [])
+    tokenWith('/products')
+  }, [tokenWith])
+
+  const handleImageChange = event => {
+    const file = event.target.files[0];
+    setImage(file);
+  };
 
   return (
     <>
@@ -39,7 +56,7 @@ const AddProduct = () => {
         </label>
         <label>
           Image
-          <input value={image} onChange={event => setImage(event.target.value)} required/>
+          <input type = "file" onChange={handleImageChange} accept = "image/*" required/>
         </label>
         <label>
           Location
@@ -47,6 +64,10 @@ const AddProduct = () => {
         </label>
         <button type='submit'>Add Product</button>
       </form>
+      {added && (
+      <div style={{ textAlign: 'center' }}>
+        <p> Product added to the  list successfully.</p></div>
+      )}
     </>
   )
 }

@@ -1,0 +1,30 @@
+/* Navbar.css */
+
+nav {
+    background-color: #333; /* Background color for the navbar */
+    padding: 10px 0; /* Padding around the links */
+  }
+  
+  ul {
+    list-style: none; /* Remove default list styling */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center-align the links */
+  }
+  
+  li {
+    display: inline-block; /* Display links horizontally */
+    margin: 0 10px; /* Add spacing between links */
+  }
+  
+  li a {
+    color: #fff; /* Link text color */
+    text-decoration: none; /* Remove default underline */
+    padding: 5px 10px; /* Add padding to the links */
+    border-radius: 5px; /* Add rounded corners to the links */
+  }
+  
+  li a:hover {
+    background-color: #555; /* Change background color on hover */
+  }
+  
