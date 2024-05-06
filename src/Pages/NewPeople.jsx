@@ -13,7 +13,7 @@ const AddPeople = () => {
 
   const handleSubmit = async event => {
     event.preventDefault()
-    const payload = {name, age, phone, email  }
+    const payload = {name, age, phone, email}
 
     await withToken('/volunteer', 'POST', payload)
     setAdded(true);
@@ -25,7 +25,7 @@ const AddPeople = () => {
 
   return (
     <>
-      <h1>Add People</h1>
+    <h1>Please add you details for Volunteering</h1>
       <form onSubmit={handleSubmit}>
         <label>
           Name

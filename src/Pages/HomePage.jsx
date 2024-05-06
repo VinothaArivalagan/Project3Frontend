@@ -1,18 +1,22 @@
+import { Link } from 'react-router-dom';
+import React from "react";
+import '../css/Home.css';
+
 const HomePage = () => {
     return (
       <>
         <h1>Welcome to Home Page</h1>
-        <p>Are you looking to declutter your home and make some extra cash? Look no further! At [Your Website Name], 
-          we provide a platform for you to sell your gently used items quickly and easily. Whether you're cleaning out 
-          your closet, garage, or attic, we make it simple to turn your unused items into cash</p>
-          <p>From electronics and gadgets to clothing and accessories, we have a wide range of categories to accommodate
-             all your used items. Whether it's furniture, appliances, books, or sporting goods, you'll find the perfect
-              category to list your products.</p>
-              <p>Ready to start selling your used items? Join [Your Website Name] today and declutter your home while
-                 making some extra cash. It's quick, easy, and completely free! Happy selling!</p>
-                 <p>Our user-friendly platform makes it easy to list your items in just a few simple steps. Upload clear
-                   photos, provide a detailed description, set a fair price, and you're ready to go! Our intuitive interface
-                    ensures that your listings stand out to potential buyers.</p>
+        <p>Welcome to The Freecycle Network™! We are a grassroots & entirely nonprofit movement of people who are
+           giving and getting stuff for free in their own Towns. It's all about reuse and keeping good stuff out of
+            landfills. Membership is free. And now you can also set up your own, smaller personal Friends Circle for 
+            gifting and lending of items with just your friends! <Link to='/signup'>Signup Now </Link></p>
+              <h2>Changing the world one gift at a time™</h2>
+              <p>Our mission is to build a worldwide sharing movement that reduces waste, saves precious resources & eases the
+                 burden on our landfills while enabling our members to benefit from the strength of a larger community.</p>  
+                  <h3>MEMBERSHIP IS ALWAYS FREE</h3>
+                  <h3>OPERATION IS GRASSROOTS AND 100% NONPROFIT</h3>
+                  <h3>LOCAL TOWNS ARE MODERATED BY VOLUNTEERS</h3>
+                  <h3>ZERO TOLERANCE OF SCAMS, SPAM AND ADULT CONTENT</h3>   
       </>
     )
   }

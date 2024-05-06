@@ -3,12 +3,20 @@
   margin: 0 auto;
   padding: 20px;
 }
+.people p {
+padding-left: 30px;
+padding-right: 30px;
+}
 
 .volunteer {
   background-color: #f9f9f9;
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
+}
+
+.volunteer p {
+  margin: 5px 0;
 }
 
 h1 {
@@ -20,21 +28,21 @@ ul {
   list-style: none;
   padding: 0;
 }
+
 .adding-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .adding {
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 30px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .adding:hover {
-    background-color: #0056b3;
-  }
+  margin-top: 20px;
+  text-align: center;
+}
+
+.adding {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.adding:hover {
+  background-color: #0056b3;
+}

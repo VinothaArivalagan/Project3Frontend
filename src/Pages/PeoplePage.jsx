@@ -26,13 +26,16 @@ const PeoplePage = () => {
   return (
     <>
         <div className="people">
-
-      <h1>Please add you details for Volunteering</h1>
+          <h1>Volunteer</h1>
+      <p>There are literally many volunteers who represent the passion and commitment 
+        behind the scenes which enable The Freecycle Network™ to function as a grassroots and nonprofit 
+        gifting movement. Here are some ways you can help.</p>
+        
       <ul>
         {volunteers.map(currentVolunteer => (
                   <div className="volunteer">
-
-          <li key={currentVolunteer._id}><strong>Name: </strong>{currentVolunteer.name}
+          <li key={currentVolunteer._id}>
+          <p><strong>Name: </strong>{currentVolunteer.name}</p>
           <p><strong>Age: </strong>{currentVolunteer.age}</p>
           <p><strong>Phone: </strong>{currentVolunteer.phone}</p>
           <p><strong>Email: </strong>{currentVolunteer.email}</p>

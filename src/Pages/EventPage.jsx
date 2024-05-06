@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
+import '../css/Event.css';
 
 const EventPage = () => {
   const [events, setEvents] = useState([])
@@ -21,19 +22,21 @@ const EventPage = () => {
   }, [])
 
   return (
-    <>
+      <div className="event-container">
+
       <h1>Here, the Upcoming Events</h1>
       <ul>
         {events.map(currentEvents => (
-          <li key={currentEvents._id}>{currentEvents.name}
-          <h3>{currentEvents.venue}</h3>
+          <li key={currentEvents._id} className="event">
+           <h3> {currentEvents.name}</h3>
+          <p>{currentEvents.venue}</p>
           <p>{currentEvents.date}</p>
           <p>{currentEvents.time}</p>
           <p>{currentEvents.organizedBy}</p>
           </li>
         ))}
       </ul>
-    </>
+    </div>
   )
 }
 

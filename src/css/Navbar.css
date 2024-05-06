@@ -20,7 +20,7 @@ nav {
   li a {
     color: #fff; /* Link text color */
     text-decoration: none; /* Remove default underline */
-    padding: 5px 10px; /* Add padding to the links */
+    padding: 5px 70px; /* Add padding to the links */
     border-radius: 5px; /* Add rounded corners to the links */
   }
   
