@@ -1,0 +1,37 @@
+
+.container {
+    max-width: 400px; /* Set maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add some padding inside the container */
+  }
+  
+  h1 {
+    font-size: 24px; /* Set font size for the heading */
+    margin-bottom: 20px; /* Add some space below the heading */
+  }
+  
+  form {
+    display: flex; /* Display form elements in a flex container */
+    flex-direction: column; /* Arrange form elements vertically */
+  }
+  
+  label {
+    margin-bottom: 10px; /* Add some space below each label */
+  }
+  
+  input {
+    padding: 8px; /* Add padding inside input fields */
+    margin-bottom: 15px; /* Add some space below each input field */
+  }
+  
+  .login button {
+    padding: 10px 20px; /* Add padding inside the button */
+    background-color: #007bff; /* Set background color for the button */
+    color: #fff; /* Set text color for the button */
+    border: none; /* Remove border from the button */
+    cursor: pointer; /* Show pointer cursor on hover */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Change background color on hover */
+  }

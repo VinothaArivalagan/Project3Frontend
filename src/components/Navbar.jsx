@@ -1,9 +1,20 @@
 import { Link } from 'react-router-dom';
 import React from "react";
 import '../css/Navbar.css';
+import  { useContext } from 'react';
+import { SessionContext } from '../Context/SessionContext';
 
 
 const Navbar = () => {
+  const { logout } = useContext(SessionContext);
+
+  const handleLogout = () => {
+    // Clear authentication token
+    logout();
+    // Redirect to login page or another page
+    // You may need to use React Router for this
+    window.location.href = '/login'; 
+  };
 
   return (
     <nav>
@@ -28,7 +39,7 @@ const Navbar = () => {
                 <Link to='/event'>Events</Link>
             </li>
             <li>
-              <Link to='/logout'>LogOut</Link>
+              <Link to='/'><button onClick={handleLogout}>LogOut</button></Link>
             </li>
           </>
         

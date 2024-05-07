@@ -31,7 +31,7 @@ const AllProductPage = () => {
         {products.map(currentProduct => (
           <div className="coursed">
           <li key={currentProduct._id}><strong>Name: </strong>{currentProduct.name}
-          <image src = {currentProduct.image}  />
+          <img src = {currentProduct.image}  />
           <h3><strong>Year: </strong> {currentProduct.year}</h3>
           <p><strong>Condition: </strong> {currentProduct.condition}</p>
           <p><strong>Location: </strong>{currentProduct.location}</p>

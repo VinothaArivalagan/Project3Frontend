@@ -14,17 +14,24 @@ nav {
   
   li {
     display: inline-block; /* Display links horizontally */
-    margin: 0 10px; /* Add spacing between links */
+    margin: 0 10px;
   }
   
   li a {
     color: #fff; /* Link text color */
     text-decoration: none; /* Remove default underline */
-    padding: 5px 70px; /* Add padding to the links */
+    padding: 10px 60px; /* Add padding to the links */
     border-radius: 5px; /* Add rounded corners to the links */
   }
   
   li a:hover {
     background-color: #555; /* Change background color on hover */
   }
-  
+  li button {
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove border */
+    color: #fff; /* Button text color */
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+  }
