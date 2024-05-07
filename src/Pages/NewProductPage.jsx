@@ -9,6 +9,7 @@ const AddProduct = () => {
   const [condition, setCondition] = useState('')
   const [image, setImage] = useState(null);
   const [location, setLocation] = useState('');
+  const [phone, setPhone] = useState();
   const [added, setAdded] = useState(false);
 
   const handleSubmit = async event => {
@@ -19,6 +20,7 @@ const AddProduct = () => {
     formData.append('condition', condition);
     formData.append('image', image); 
     formData.append('location', location);
+    formData.append('phone', phone);
 
     await formDataWithToken('/products', 'POST', formData)
     setAdded(true);
@@ -57,6 +59,10 @@ const AddProduct = () => {
         <label>
           Location
           <input value={location} onChange={event => setLocation(event.target.value)} required/>
+        </label>
+        <label>
+          Phone
+          <input value={phone} onChange={event => setPhone(event.target.value)} required/>
         </label>
         <button type='submit'>Add Product</button>
       </form>

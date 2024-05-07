@@ -1,45 +1,89 @@
-/* Style for the product list */
-ul {
-    list-style: none;
-    padding: 0;
-  }
+/* Set body margin to 0 */
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Define styles for the shop title */
+.shopTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items horizontally */
+  justify-content: center; /* Center align items vertically */
+  padding: 20px; /* Add padding for spacing */
+  background-color: #f0f0f0; /* Add background color */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  text-align: center;/* Add box shadow */
+  position: relative; 
+}
+.logoimg{
   
-  li {
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-  }
-  
-  /* Style for the product image */
-  li img {
-    max-width: 200px;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  /* Style for the product name */
-  li h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  
-  /* Style for the product details */
-  li p {
-    margin-bottom: 5px;
-  }
-  
-  /* Style for the "New Product" link */
-  li:last-child {
-    margin-top: 20px;
-  }
-  
-  li:last-child a {
-    color: blue;
-    text-decoration: none;
-  }
-  
-  li:last-child a:hover {
-    text-decoration: underline;
-  }
-  
+    width: 120px; 
+    height: 120px;
+    position: absolute;
+    top:70px;
+}
+
+.shopTitle h1 {
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+  flex: 1;
+}
+
+.shop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 100px;
+ 
+}
+
+.shop ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1em;
+  row-gap: 1em;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.shop ul li {
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.shop ul img {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Define styles for course titles */
+.shop ul span {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.shop ul p {
+  margin-top: 10px;
+  color: #666;
+}
+
+.new {
+  /* Add your styling properties here */
+  color: blue; /* Example color */
+  text-decoration: none; 
+  position: absolute; /* Position the link absolutely */
+  bottom: 20px; /* Adjust the distance from the bottom */
+}
+
+/* Optionally, you can style it on hover */
+.new {
+  text-decoration: underline;
+
+}

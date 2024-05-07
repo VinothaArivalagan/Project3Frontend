@@ -25,24 +25,27 @@ const AllProductPage = () => {
 
   return (
     <>
-    <div className="wrapper"></div>
+    <div className="shop">
+    <div className="shopTitle">
       <h1>All Categories</h1>
       <ul>
         {products.map(currentProduct => (
-          <div className="coursed">
+          
           <li key={currentProduct._id}><strong>Name: </strong>{currentProduct.name}
           <img src = {currentProduct.image}  />
           <h3><strong>Year: </strong> {currentProduct.year}</h3>
           <p><strong>Condition: </strong> {currentProduct.condition}</p>
           <p><strong>Location: </strong>{currentProduct.location}</p>
-          </li></div>
-           ))}
-          <li>
-          <Link to='/products/new'>NewProduct</Link>
+          <p><strong>Phone: </strong>{currentProduct.phone}</p>
           </li>
-
+           ))}
+          <div className='new'>
+          <Link to='/products/new'>NewProduct</Link>
+          </div>
+         
        
       </ul>
+      </div></div>
     </>
   )
 }
