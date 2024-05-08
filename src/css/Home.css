@@ -1,16 +1,20 @@
+
 .home-page {
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    background-color: bisque;
   }
-  
+  body {
+    background-color: #66dbbd !important; /* Replace with your desired background color */
+  }
   h1 {
     font-size: 28px;
     margin-bottom: 20px;
   }
   
-  p {
+  .home-page p {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;

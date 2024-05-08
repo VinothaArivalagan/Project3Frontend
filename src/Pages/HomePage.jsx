@@ -4,6 +4,8 @@ import '../css/Home.css';
 
 const HomePage = () => {
     return (
+      <div className="home-page">
+      
       <>
         <h1>Welcome to Home Page</h1>
         <p>Welcome to The Freecycle Network™! We are a grassroots & entirely nonprofit movement of people who are
@@ -18,6 +20,7 @@ const HomePage = () => {
                   <h3>LOCAL TOWNS ARE MODERATED BY VOLUNTEERS</h3>
                   <h3>ZERO TOLERANCE OF SCAMS, SPAM AND ADULT CONTENT</h3>   
       </>
+      </div>
     )
   }
   

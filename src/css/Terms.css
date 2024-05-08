@@ -1,0 +1,26 @@
+.terms-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: bisque;
+  }
+  
+  .terms-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .terms-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .terms-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .terms-container p:last-child {
+    margin-bottom: 0;
+  }

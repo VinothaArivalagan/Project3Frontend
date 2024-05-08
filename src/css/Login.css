@@ -29,9 +29,11 @@
     background-color: #007bff; /* Set background color for the button */
     color: #fff; /* Set text color for the button */
     border: none; /* Remove border from the button */
-    cursor: pointer; /* Show pointer cursor on hover */
+    cursor: pointer; 
+
   }
   
   button:hover {
-    background-color: #0056b3; /* Change background color on hover */
+    background-color: #0056b3;
+    /* Change background color on hover */
   }

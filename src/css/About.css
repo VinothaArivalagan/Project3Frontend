@@ -1,0 +1,23 @@
+.about {
+    max-width: 1500px;
+    margin: 10px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: bisque;
+
+  }
+  
+  .about h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .about p:last-child {
+    margin-bottom: 230px;
+  }
