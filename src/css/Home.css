@@ -9,9 +9,10 @@
   body {
     background-color: #66dbbd !important; /* Replace with your desired background color */
   }
-  h1 {
+  .home-page h1 {
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 0;
   }
   
   .home-page p {
@@ -22,13 +23,13 @@
     padding-right: 180px;
   }
   
-  h2 {
+  .home-page h2 {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
   }
   
-  h3 {
+  .home-page h3 {
     font-size: 20px;
     margin-bottom: 10px;
     text-align: center;

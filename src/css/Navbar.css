@@ -2,19 +2,20 @@
 
 nav {
     background-color: #333; /* Background color for the navbar */
-    padding: 10px 0; /* Padding around the links */
+    padding: 1px 0;
+
   }
   
-  ul {
+  nav ul {
     list-style: none; /* Remove default list styling */
     margin: 0;
     padding: 0;
     text-align: center; /* Center-align the links */
   }
   
-  li {
+  nav li {
     display: inline-block; /* Display links horizontally */
-    margin: 0 10px;
+    margin: 13px 10px;
   }
   
   li a {

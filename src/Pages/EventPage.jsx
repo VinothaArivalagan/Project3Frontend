@@ -24,7 +24,8 @@ const EventPage = () => {
   return (
       <div className="event-container">
 
-      <h1>Here, the Upcoming Events</h1>
+      <h1>We also Participating in the event.</h1> 
+      <h2>Here, our Upcoming Events</h2>
       <ul>
         {events.map(currentEvents => (
           <li key={currentEvents._id} className="event">

@@ -7,8 +7,8 @@ const HomePage = () => {
       <div className="home-page">
       
       <>
-        <h1>Welcome to Home Page</h1>
-        <p>Welcome to The Freecycle Network™! We are a grassroots & entirely nonprofit movement of people who are
+        <h1>SECOND LIFE PRODUCTS</h1>
+        <p>Welcome to The Second Life Products Network™! We are a grassroots & entirely nonprofit movement of people who are
            giving and getting stuff for free in their own Towns. It's all about reuse and keeping good stuff out of
             landfills. Membership is free. And now you can also set up your own, smaller personal Friends Circle for 
             gifting and lending of items with just your friends! <Link to='/signup'>Signup Now </Link></p>

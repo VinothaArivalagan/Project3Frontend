@@ -6,6 +6,7 @@
 .people p {
 padding-left: 30px;
 padding-right: 30px;
+text-align: center;
 }
 
 .volunteer {
@@ -16,6 +17,7 @@ padding-right: 30px;
 }
 .volunteer p {
   margin: 4px 0;
+  text-align: center;
 }
 
 
