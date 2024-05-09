@@ -31,9 +31,9 @@ const AllProductPage = () => {
       <ul>
         {products.map(currentProduct => (
           
-          <li key={currentProduct._id}><strong>Name: </strong>{currentProduct.name}
+          <li key={currentProduct._id}><strong>{currentProduct.name}</strong>
           <img src = {currentProduct.image}  />
-          <h3><strong>Year: </strong> {currentProduct.year}</h3>
+          <p><strong>Year: </strong> {currentProduct.year}</p>
           <p><strong>Condition: </strong> {currentProduct.condition}</p>
           <p><strong>Location: </strong>{currentProduct.location}</p>
           <p><strong>Phone: </strong>{currentProduct.phone}</p>
