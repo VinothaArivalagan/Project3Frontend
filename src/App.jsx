@@ -14,6 +14,7 @@ import AboutPage from './Pages/About';
 import ContactPage from './Pages/ContactPage';
 import TermsPage from './Pages/TermsPage';
 import Footer from './components/Footer';
+import EditVolunteer from './Pages/EditPeople';
 
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
     <Route path = '/volunteer' element={<PrivateRoute><Volunteer /> </PrivateRoute>} />
     <Route path = '/event' element={<PrivateRoute><Event /> </PrivateRoute>} />
     <Route path = '/volunteer/new' element={<PrivateRoute> <AddPeople /> </PrivateRoute>} />
+    <Route path = '/volunteer/edit/:id' element={<PrivateRoute> < EditVolunteer /> </PrivateRoute>} />
+
     <Route path = '/about' element={<AboutPage />} />
     <Route path = '/contact' element={<ContactPage />} />
     <Route path = '/terms' element={<TermsPage />} />

@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../css/People.css';
 
 
 const PeoplePage = () => {
   const [volunteers, setVolunteers] = useState([])
+  const navigate = useNavigate()
 
   const fetchVolunteers = async () => {
     try {
@@ -18,6 +20,24 @@ const PeoplePage = () => {
       console.log(error)
     }
   }
+
+  const handleDelete = async (volunteerId) => {
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/volunteer/${volunteerId}`, {
+        method: 'DELETE',
+      });
+      if (response.ok) {
+        // If the delete operation is successful, update the volunteer list by refetching the data
+        fetchVolunteers();
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleEdit = (volunteerId) => {
+    navigate(`/volunteer/edit/${volunteerId}`);
+  };
 
   useEffect(() => {
     fetchVolunteers()
@@ -39,7 +59,8 @@ const PeoplePage = () => {
           <p><strong>Age: </strong>{currentVolunteer.age}</p>
           <p><strong>Phone: </strong>{currentVolunteer.phone}</p>
           <p><strong>Email: </strong>{currentVolunteer.email}</p>
-          
+          <button className="edit" onClick={() => handleEdit(currentVolunteer._id)}>Edit</button>
+          <button  onClick={() => handleDelete(currentVolunteer._id)}>Delete</button>
           </li></div>
             ))}
           <div className='adding-container'>
